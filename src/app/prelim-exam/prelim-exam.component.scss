@@ -1,0 +1,96 @@
+// ============================================
+// Phase 2: Large Desktop Layout (Base SCSS)
+// ============================================
+// This is the "Desktop First" base
+// Applies to all sizes, optimized for wide screens (>920px)
+
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  padding: 1.5rem;
+}
+
+.grid-item {
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  background-color: #dedede;
+  color: #333;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+// ============================================
+// Phase 3: Desktop Layout (max-width: 920px)
+// ============================================
+// 8 items per row with blue background
+@media (max-width: 920px) {
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .grid-item {
+    background-color: #4a7c9e; // Muted blue
+    color: #ffffff; // White text for contrast
+    border-color: #3a6c8e;
+  }
+}
+
+// ============================================
+// Phase 4: Tablet Layout (max-width: 756px)
+// ============================================
+// 6 items per row with green background
+@media (max-width: 756px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 1rem;
+  }
+
+  .grid-item {
+    background-color: #5a9367; // Muted green
+    color: #ffffff; // White text for contrast
+    border-color: #4a8357;
+  }
+}
+
+// ============================================
+// Phase 5: Mobile Layout (max-width: 460px)
+// ============================================
+// 1 item per row with red background
+@media (max-width: 460px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5rem;
+    gap: 8px;
+  }
+
+  .grid-item {
+    background-color: #c45a5a; // Muted red
+    color: #ffffff; // White text for contrast
+    border-color: #b44a4a;
+    min-height: 60px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
