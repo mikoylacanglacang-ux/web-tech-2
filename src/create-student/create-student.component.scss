@@ -1,0 +1,164 @@
+// Create Student Component Styles
+
+.create-student-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// Header Styles
+.header {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: center;
+
+  .header-title {
+    margin: 0;
+    font-size: 2rem;
+    color: #2d3748;
+    font-weight: 700;
+  }
+}
+
+// Main Content
+.main-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// Student Form
+.student-form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      background-color: #ffffff;
+
+      &:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      &::placeholder {
+        color: #a0aec0;
+      }
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232d3748' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 12px;
+      padding-right: 2.5rem;
+
+      option {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .btn-cancel,
+    .btn-submit {
+      flex: 1;
+      padding: 0.875rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cancel {
+      background-color: #e2e8f0;
+      color: #2d3748;
+
+      &:hover {
+        background-color: #cbd5e0;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    .btn-submit {
+      background-color: #48bb78;
+      color: white;
+      box-shadow: 0 2px 4px rgba(72, 187, 120, 0.3);
+
+      &:hover {
+        background-color: #38a169;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(72, 187, 120, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .create-student-container {
+    padding: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+
+    .header-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .student-form {
+    padding: 1.5rem;
+
+    .form-actions {
+      flex-direction: column;
+
+      .btn-cancel,
+      .btn-submit {
+        width: 100%;
+      }
+    }
+  }
+}

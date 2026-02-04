@@ -1,0 +1,37 @@
+<div class="students-container">
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="header-title">Student Directory</h1>
+    <button class="btn-add-student" (click)="navigateToCreateStudent()">
+      + Add Student
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Student Cards List -->
+    <div class="student-list">
+      <article class="student-card" *ngFor="let student of students">
+        <div class="card-content">
+          <h2 class="student-name">{{ student.name }}</h2>
+          <p class="student-course">
+            <span class="label">Course:</span> {{ student.course }}
+          </p>
+          <p class="student-year">
+            <span class="label">Year Level:</span> {{ student.yearLevel }}
+          </p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-delete" (click)="deleteStudent(student.id)">
+            Delete
+          </button>
+        </div>
+      </article>
+
+      <!-- Empty State -->
+      <div class="empty-state" *ngIf="students.length === 0">
+        <p>No students found. Add a new student to get started!</p>
+      </div>
+    </div>
+  </main>
+</div>

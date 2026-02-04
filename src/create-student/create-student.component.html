@@ -1,0 +1,66 @@
+<div class="create-student-container">
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="header-title">Add New Student</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <form class="student-form" (ngSubmit)="onSubmit()">
+      <!-- Student Name Field -->
+      <div class="form-group">
+        <label for="studentName" class="form-label">Student Name</label>
+        <input
+          type="text"
+          id="studentName"
+          name="studentName"
+          class="form-input"
+          [(ngModel)]="student.name"
+          placeholder="Enter student name"
+          required
+        />
+      </div>
+
+      <!-- Course Field -->
+      <div class="form-group">
+        <label for="course" class="form-label">Course</label>
+        <input
+          type="text"
+          id="course"
+          name="course"
+          class="form-input"
+          [(ngModel)]="student.course"
+          placeholder="Enter course name"
+          required
+        />
+      </div>
+
+      <!-- Year Level Field -->
+      <div class="form-group">
+        <label for="yearLevel" class="form-label">Year Level</label>
+        <select
+          id="yearLevel"
+          name="yearLevel"
+          class="form-select"
+          [(ngModel)]="student.yearLevel"
+          required
+        >
+          <option value="" disabled selected>Select year level</option>
+          <option *ngFor="let year of yearLevels" [value]="year">
+            {{ year }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Form Actions -->
+      <div class="form-actions">
+        <button type="button" class="btn-cancel" (click)="onCancel()">
+          Cancel
+        </button>
+        <button type="submit" class="btn-submit">
+          Add Student
+        </button>
+      </div>
+    </form>
+  </main>
+</div>
