@@ -44,10 +44,6 @@ label {
   border-color: #4CAF50;
 }
 
-.form-control:invalid:not(:placeholder-shown) {
-  border-color: #f44336;
-}
-
 .error-message {
   color: #f44336;
   font-size: 0.85rem;
@@ -76,20 +72,10 @@ label {
 
 .btn-primary:hover:not(:disabled) {
   background-color: #45a049;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
   opacity: 0.6;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .create-student-container {
-    margin: 1rem;
-    padding: 1rem;
-  }
 }
